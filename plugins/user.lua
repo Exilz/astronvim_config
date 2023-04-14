@@ -17,8 +17,14 @@ return {
   },
   {
     "github/copilot.vim",
-    config = function() end,
+    config = function()
+    end,
     event = "User AstroFile",
     cmd = { "Copilot" },
+  },
+  {
+    "Mofiqul/dracula.nvim",
+    config = function()
+    end,
   },
 }
