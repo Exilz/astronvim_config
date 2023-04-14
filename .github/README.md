@@ -2,7 +2,16 @@
 
 A user configuration template for [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
+## 📷 Screenshot
+
+![neovim tmux dracula typescript](https://i.imgur.com/gKYcr5s.png)
+
 ## 🛠️ Installation
+
+### Requirements
+
+- Everything listed in [AstroNvim's documentation](https://github.com/AstroNvim/AstroNvim)
+- Some globally installed npm packages for LSPs : `typescript-language-server`, `graphql-language-service-server`, `graphql-language-service-cli`, `@prisma/language-server`
 
 #### Make a backup of your current nvim and shared folder
 
@@ -26,7 +35,7 @@ You can also just clone this repository directly if you do not want to track you
 #### Clone the repository
 
 ```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim/lua/user
+git clone https://github.com/Exilz/astronvim_config ~/.config/nvim/lua/user
 ```
 
 #### Start Neovim
