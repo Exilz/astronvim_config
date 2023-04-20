@@ -22,6 +22,8 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>rco"] = { ":%s/<C-r><C-w>/", desc = "Replace all occurrences under cursor" },
+    ["<leader>rvo"] = { ":%s//<C-r>/", desc = "Replace all occurrences of visual selection" },
   },
   t = {
     -- setting a mapping to false will disable it
