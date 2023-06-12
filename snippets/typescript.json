@@ -1,0 +1,18 @@
+{
+  "Nestcommandhandler": {
+    "prefix": "nestcommandhandler",
+    "body": [
+      "import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';",
+      "",
+      "@CommandHandler($1)",
+      "export class $2Handler implements ICommandHandler<$1>",
+      "{",
+      "    constructor() {}",
+      "",
+      "    async execute(command: $1) {",
+      "        $3",
+      "    }",
+      "}"
+    ]
+  }
+}

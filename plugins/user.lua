@@ -23,8 +23,30 @@ return {
     cmd = { "Copilot" },
   },
   {
-    "Mofiqul/dracula.nvim",
+    "catppuccin/nvim",
+    name = "catppuccin",
+    config = function()
+      require("catppuccin").setup {
+        transparent_background = true,
+        integrations = {
+          telescope = true,
+          neotree = true,
+        },
+      }
+    end,
+  },
+  {
+    "danilamihailov/beacon.nvim",
     config = function()
     end,
+    opts = {},
+    event = "User AstroFile",
+  },
+  {
+    "almo7aya/openingh.nvim",
+    config = function()
+    end,
+    opts = {},
+    event = "User AstroFile",
   },
 }

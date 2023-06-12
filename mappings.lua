@@ -24,6 +24,10 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<leader>rco"] = { ":%s/<C-r><C-w>/", desc = "Replace all occurrences under cursor" },
     ["<leader>rvo"] = { ":%s//<C-r>/", desc = "Replace all occurrences of visual selection" },
+    -- telescope overrides
+    ["<leader>fp"] = { "<cmd>Telescope resume<cr>", desc = "Resume previous telescope search" },
+    -- git overrides
+    ["<leader>gh"] = { "<cmd>OpenInGHFile<cr>", desc = "Open file in GitHub" },
   },
   t = {
     -- setting a mapping to false will disable it
