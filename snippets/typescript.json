@@ -1,15 +1,31 @@
 {
-  "Nestcommandhandler": {
+  "NestCommandHandler": {
     "prefix": "nestcommandhandler",
     "body": [
       "import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';",
       "",
-      "@CommandHandler($1)",
-      "export class $2Handler implements ICommandHandler<$1>",
+      "@CommandHandler($1Command)",
+      "export class $1Handler implements ICommandHandler<$1Command>",
       "{",
       "    constructor() {}",
       "",
-      "    async execute(command: $1) {",
+      "    async execute(command: $1Command) {",
+      "        $2",
+      "    }",
+      "}"
+    ]
+  },
+  "NestQueryHandler": {
+    "prefix": "nestqueryhandler",
+    "body": [
+      "import { IQueryHandler, QueryHandler } from '@nestjs/cqrs';",
+      "",
+      "@QueryHandler($1Query)",
+      "export class $1Handler implements IQueryHandler<$1Query> {",
+      "",
+      "    constructor() {}",
+      "",
+      "    async execute(query: $1Query) {",
       "        $3",
       "    }",
       "}"
