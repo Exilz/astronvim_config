@@ -18,9 +18,27 @@ return {
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
-    -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
-      -- ensure_installed = { "python" },
+      ensure_installed = { "node2" },
+      handlers = {
+        node2 = function(source_name)
+          local dap = require "dap"
+          dap.adapters.node2 = {
+            type = "executable",
+            command = vim.fn.exepath "node-debug2-adapter",
+          }
+
+          dap.configurations.typescript = {
+            {
+              type = "node2",
+              name = "Debug node (with restart)",
+              request = "attach",
+              processId = require("dap.utils").pick_process,
+              restart = true,
+            },
+          }
+        end,
+      },
     },
   },
 }
