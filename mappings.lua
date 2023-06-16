@@ -28,6 +28,8 @@ return {
     ["<leader>fp"] = { "<cmd>Telescope resume<cr>", desc = "Resume previous telescope search" },
     -- git overrides
     ["<leader>gh"] = { "<cmd>OpenInGHFile<cr>", desc = "Open file in GitHub" },
+    -- splits overrides
+    ["-"] = { "<cmd>split<cr>", desc = "Horizontal Split" },
   },
   t = {
     -- setting a mapping to false will disable it
