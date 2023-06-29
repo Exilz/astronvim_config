@@ -15,6 +15,13 @@ return {
       end,
       desc = "Close buffer",
     },
+    ["<leader>bC"] = {
+      function()
+        require("astronvim.utils.buffer").close_all()
+        if require("astronvim.utils").is_available "alpha-nvim" then require("alpha").start() end
+      end,
+      desc = "Force close buffer",
+    },
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
