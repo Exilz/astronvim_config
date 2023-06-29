@@ -6,6 +6,15 @@
 return {
   -- first key is the mode
   n = {
+    -- open Alpha Automatically When No More Buffers
+    ["<leader>c"] = {
+      function()
+        local bufs = vim.fn.getbufinfo { buflisted = true }
+        require("astronvim.utils.buffer").close(0)
+        if require("astronvim.utils").is_available "alpha-nvim" and not bufs[2] then require("alpha").start() end
+      end,
+      desc = "Close buffer",
+    },
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
