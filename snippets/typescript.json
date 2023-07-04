@@ -30,5 +30,20 @@
       "    }",
       "}"
     ]
+  },
+  "NestEventHandler": {
+    "prefix": "nesteventhandler",
+    "body": [
+      "import { EventsHandler, IEventHandler } from '@nestjs/cqrs';",
+      "",
+      "@EventsHandler($1Event)",
+      "export class $1Handler implements IEventHandler<$1Event> {",
+      "    constructor() {}",
+      "",
+      "    handle(event: $1Event) {",
+      "",
+      "    }",
+      "}"
+    ]
   }
 }
