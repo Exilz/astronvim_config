@@ -46,21 +46,9 @@ return {
     ["<leader>gh"] = { "<cmd>OpenInGHFile<cr>", desc = "Open file in GitHub" },
     -- splits overrides
     ["-"] = { "<cmd>split<cr>", desc = "Horizontal Split" },
-    -- use register 0 by default when yanking & pasting
-    ["p"] = { '"0p' },
-    ["P"] = { '"0P' },
-    ["y"] = { '"0y' },
-    ["d"] = { '"0d' },
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
-  },
-  v = {
-    -- use register 0 by default when yanking & pasting
-    ["p"] = { '"0p' },
-    ["P"] = { '"0P' },
-    ["y"] = { '"0y' },
-    ["d"] = { '"0d' },
   },
 }
