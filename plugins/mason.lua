@@ -23,11 +23,11 @@ return {
       handlers = {
         node2 = function(source_name)
           local dap = require "dap"
+
           dap.adapters.node2 = {
             type = "executable",
             command = vim.fn.exepath "node-debug2-adapter",
           }
-
           dap.configurations.typescript = {
             {
               type = "node2",
@@ -35,6 +35,21 @@ return {
               request = "attach",
               processId = require("dap.utils").pick_process,
               restart = true,
+            },
+          }
+
+          dap.adapters.godot = {
+            type = "server",
+            host = "127.0.0.1",
+            port = 6006,
+          }
+          dap.configurations.gdscript = {
+            {
+              type = "godot",
+              request = "launch",
+              name = "Launch scene",
+              project = "${workspaceFolder}",
+              launch_scene = true,
             },
           }
         end,

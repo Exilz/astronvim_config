@@ -10,4 +10,5 @@ return {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.pack.godot" },
 }

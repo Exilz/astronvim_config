@@ -49,6 +49,12 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+      "gdscript",
+    },
+    config = {
+      gdscript = {
+        filetypes = { "gd", "gdscript", "gdscript3" },
+      },
     },
   },
   -- Configure require("lazy").setup() options
